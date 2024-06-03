@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background1"
+    tools:context=".Horse">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <EditText
+        android:id="@+id/txtMobileNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="90dp"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:padding="6dp"
+        android:textColorHint="@color/material_dynamic_neutral30"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgHorse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/horse" />
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imgHorse"
+        android:layout_margin="60dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Horses are powerful and graceful animals known for their speed and agility. They are among the fastest land animals, capable of reaching speeds up to 55 miles per hour. Horses are found worldwide, primarily in plains, grasslands, and farms where they are domesticated. They have been used by humans for various purposes, including transportation, agriculture, sports, and therapy. Horses are also popular in equestrian sports such as racing, show jumping, and dressage, showcasing their speed, strength, and elegance. Their versatility and strong bond with humans make them one of the most cherished animals in history."
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/forwardArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="190dp"
+        android:layout_toRightOf="@+id/imgHorse"
+        app:drawableStartCompat="@drawable/ic_arrow_forward" />
+
+    <TextView
+        android:id="@+id/backwardArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="190dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/imgHorse"
+        app:drawableStartCompat="@drawable/ic_arrow_back" />
+
+    <TextView
+        android:id="@+id/audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        app:drawableStartCompat="@drawable/ic_volume" />
+
+</RelativeLayout>
